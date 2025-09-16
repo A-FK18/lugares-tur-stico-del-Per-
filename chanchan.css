@@ -1,0 +1,96 @@
+/* Estilos generales para el cuerpo de la página */
+body {
+    font-family: 'Lato', 'Roboto', sans-serif; /* Fuente principal */
+    background-color: #FBFBF3; /* Color de fondo que evoca el adobe */
+    color: #5A4532; /* Color del texto principal */
+    margin: 0;
+    padding: 2rem 1rem;
+    line-height: 1.6;
+}
+
+/* Estilos para el contenedor principal 'hijo' */
+.hijo {
+    display: flex; /* Habilita Flexbox para alinear los elementos */
+    flex-wrap: wrap; /* Permite que los elementos se envuelvan */
+    justify-content: center; /* Centra los elementos horizontalmente */
+    gap: 2rem; /* Espacio entre las tarjetas */
+    max-width: 1200px; /* Ancho máximo del contenedor */
+    margin: 0 auto; /* Centra el contenedor */
+}
+
+/* Estilos para cada 'nieto' (las tarjetas de contenido) */
+.nieto {
+    background-color: #FFFFFF; /* Fondo blanco para las tarjetas */
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Sombra suave para un efecto de elevación */
+    padding: 1.5rem;
+    width: 100%; /* Ancho completo en móviles */
+    max-width: 280px; /* Ancho máximo en pantallas grandes */
+    text-align: left; /* Alinea el texto a la izquierda */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-bottom: 5px solid #C06C47; /* Borde de acento en la parte inferior */
+}
+
+/* Efecto al pasar el mouse sobre la tarjeta */
+.nieto:hover {
+    transform: translateY(-5px); /* Desplaza la tarjeta hacia arriba */
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15); /* Sombra más pronunciada */
+}
+
+/* Estilos para los títulos de cada tarjeta */
+.nieto h2 {
+    font-family: 'Oswald', 'Montserrat', sans-serif; /* Fuente de título */
+    font-size: 1.7rem;
+    color: #2C3E50; /* Color de acento */
+    margin-top: 0;
+    margin-bottom: 1rem;
+    line-height: 1.2;
+}
+
+/* Estilos para las imágenes dentro de las tarjetas */
+.nieto img {
+    max-width: 100%; /* La imagen no excede el ancho de la tarjeta */
+    height: auto;
+    border-radius: 8px; /* Bordes redondeados */
+    margin-bottom: 1rem;
+}
+
+/* Estilos para la lista de puntos */
+.nieto ul {
+    list-style-type: none; /* Elimina las viñetas por defecto */
+    padding-left: 0;
+    margin: 0;
+}
+
+.nieto li {
+    font-size: 0.95rem;
+    margin-bottom: 0.5rem;
+    position: relative;
+    padding-left: 1.5em; /* Espacio para la viñeta personalizada */
+}
+
+/* Viñeta personalizada con un símbolo que evoca el adobe o la cultura Chimú */
+.nieto li::before {
+    content: '🧱'; /* Un emoji que evoca la construcción en adobe */
+    color: #C06C47; /* Color de la terracota para las viñetas */
+    font-size: 1.2em;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+/* Estilos para hacer el diseño adaptable (Responsive) */
+@media (min-width: 768px) {
+    .hijo {
+        justify-content: space-between;
+    }
+    .nieto {
+        max-width: 45%; /* Dos tarjetas por fila en tabletas */
+    }
+}
+
+@media (min-width: 992px) {
+    .nieto {
+        max-width: 23%; /* Cuatro tarjetas por fila en escritorios */
+    }
+}

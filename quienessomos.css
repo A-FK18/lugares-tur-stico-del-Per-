@@ -1,0 +1,56 @@
+/* Estilos generales para el cuerpo de la página */
+body {
+    font-family: 'Verdana', 'Roboto', sans-serif; /* Fuente principal */
+    background-color: #FDF5E6; /* Color de fondo claro */
+    color: #333333; /* Color del texto principal */
+    margin: 0;
+    padding: 0;
+    line-height: 1.6; /* Espacio entre líneas para mejor lectura */
+    display: flex; /* Para centrar el contenido */
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Estilos para el contenedor principal 'padre' */
+.padre {
+    max-width: 800px; /* Ancho máximo para el contenido */
+    margin: 2rem auto; /* Centra el contenedor y agrega espacio */
+    padding: 2rem;
+    background-color: white; /* Un fondo blanco para que el contenido destaque */
+    border-radius: 10px; /* Bordes ligeramente redondeados */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Sombra suave para un efecto de elevación */
+    text-align: center; /* Centra el texto dentro del contenedor */
+}
+
+/* Estilos para el título principal */
+h1 {
+    font-family: 'Georgia', 'Merriweather', serif; /* Fuente serif para el título */
+    color: #8B4513; /* Color marrón ocre para el título */
+    font-size: 2.5rem; /* Tamaño de fuente más grande */
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    text-transform: uppercase; /* Convierte el texto a mayúsculas */
+    letter-spacing: 2px; /* Espaciado entre letras */
+}
+
+/* Estilos para los párrafos */
+p {
+    margin-bottom: 1.5rem; /* Espacio entre párrafos */
+    font-size: 1.1rem; /* Tamaño de fuente ligeramente más grande */
+    text-align: justify; /* Justifica el texto para una apariencia más formal */
+}
+
+/* Estilos para la imagen */
+img {
+    max-width: 100%; /* La imagen no superará el ancho del contenedor */
+    height: auto; /* Mantiene la proporción de la imagen */
+    margin-top: 2rem;
+    border-radius: 10px; /* Bordes redondeados para la imagen */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra para la imagen */
+    transition: transform 0.3s ease; /* Transición suave al pasar el mouse */
+}
+
+/* Efecto al pasar el mouse sobre la imagen */
+img:hover {
+    transform: scale(1.02); /* Agranda ligeramente la imagen al pasar el mouse */
+}

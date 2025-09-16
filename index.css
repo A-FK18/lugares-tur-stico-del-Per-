@@ -1,0 +1,142 @@
+/* Estilos generales para el cuerpo de la página */
+body {
+    font-family: 'Verdana', 'Roboto', sans-serif; /* Fuente principal */
+    background-color: #F5F5DC; /* Color de fondo claro */
+    color: #2F4F4F; /* Color del texto */
+    margin: 0;
+    padding: 0;
+    line-height: 1.6; /* Espacio entre líneas para mejor lectura */
+}
+
+/* --- Encabezado y Navegación --- */
+header {
+    background-color: #A0522D; /* Un color tierra oscuro para el encabezado */
+    color: white;
+    padding: 1rem 0;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* Sombra para que destaque */
+}
+
+nav ul {
+    list-style-type: none; /* Elimina las viñetas de la lista */
+    padding: 0;
+    margin: 0;
+    display: flex; /* Para que los elementos se alineen horizontalmente */
+    justify-content: center; /* Centra los elementos de la lista */
+    flex-wrap: wrap; /* Permite que los elementos se envuelvan en pantallas pequeñas */
+}
+
+nav li {
+    position: relative; /* Importante para el submenú */
+    padding: 0 1.5rem;
+}
+
+nav a, nav li {
+    color: white;
+    text-decoration: none; /* Quita el subrayado de los enlaces */
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: color 0.3s; /* Efecto de transición para el hover */
+}
+
+nav a:hover, nav li:hover {
+    color: #CD853F; /* Color de acento al pasar el mouse */
+    cursor: pointer;
+}
+
+/* Estilos para el submenú de "turismo" */
+nav ul ul {
+    display: none; /* Oculta el submenú por defecto */
+    position: absolute;
+    top: 100%; /* Lo coloca debajo del elemento padre */
+    left: 0;
+    background-color: #A0522D;
+    padding: 0.5rem;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    z-index: 1000; /* Asegura que el submenú esté encima de otros elementos */
+    flex-direction: column; /* Apila los elementos del submenú verticalmente */
+    width: 250px; /* Ancho fijo para el submenú */
+    text-align: left; /* Alinea el texto a la izquierda */
+}
+
+nav li:hover > ul {
+    display: flex; /* Muestra el submenú al pasar el mouse sobre el padre */
+}
+
+/* Estilos de los elementos del submenú */
+nav ul ul li {
+    padding: 0.5rem 1rem;
+    margin: 0;
+    border-bottom: 1px solid rgba(255,255,255,0.1); /* Línea divisoria */
+}
+
+nav ul ul li:last-child {
+    border-bottom: none;
+}
+
+/* --- Contenido Principal --- */
+main {
+    max-width: 900px; /* Ancho máximo para el contenido */
+    margin: 2rem auto; /* Centra el contenido */
+    padding: 0 1rem;
+}
+
+main h2 {
+    font-family: 'Georgia', 'Merriweather', serif; /* Fuente para los títulos */
+    color: #CD853F; /* Color de acento para los títulos */
+    border-bottom: 2px solid #CD853F; /* Línea decorativa debajo del título */
+    padding-bottom: 0.5rem;
+}
+
+main ul {
+    list-style-type: none; /* Quita viñetas */
+    padding-left: 0;
+}
+
+main li {
+    background-color: white; /* Fondo blanco para las tarjetas de contenido */
+    margin-bottom: 1.5rem;
+    padding: 1.5rem;
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* Sombra suave para un efecto 3D */
+}
+
+main p {
+    font-style: italic;
+    color: #555;
+    margin-bottom: 1rem;
+}
+
+/* --- Pie de página --- */
+footer {
+    background-color: #2F4F4F; /* Un gris oscuro para el pie de página */
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: 2rem;
+}
+
+/* Media Queries para diseño adaptable (Responsive Design) */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column; /* Apila los elementos en pantallas pequeñas */
+    }
+    nav li {
+        padding: 0.5rem 0;
+    }
+    nav ul ul {
+        position: static; /* Cambia a posición estática para que aparezca debajo */
+        width: 100%;
+        box-shadow: none;
+    }
+    nav li:hover > ul {
+        display: none; /* Evita que el submenú se abra en pantallas pequeñas */
+    }
+    /* Estilos para el menú móvil */
+    nav li.dropdown {
+        background-color: #CD853F;
+    }
+    nav li.dropdown:hover > ul {
+        display: flex;
+    }
+}

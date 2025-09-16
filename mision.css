@@ -1,0 +1,65 @@
+/* Estilos generales para el cuerpo de la página */
+body {
+    font-family: 'Lato', 'Roboto', sans-serif; /* Fuente principal */
+    background-color: #FDF5E6; /* Fondo blanco */
+    color: #2F4F4F; /* Color del texto */
+    margin: 0;
+    padding: 0;
+    line-height: 1.6; /* Espacio entre líneas para mejor lectura */
+    display: flex; /* Flexbox para centrar el contenido */
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh; /* Asegura que el cuerpo ocupe toda la altura de la ventana */
+}
+
+/* Estilos para el contenedor principal 'padre' */
+.padre {
+    max-width: 700px; /* Un ancho más estrecho para un diseño centrado */
+    margin: 2rem auto;
+    padding: 2.5rem;
+    background-color: #fdf5e6; /* Un gris muy claro para diferenciar el contenedor */
+    border-radius: 12px; /* Bordes redondeados sutiles */
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08); /* Sombra para dar profundidad */
+    text-align: center;
+}
+
+/* Estilos para el título principal */
+h1 {
+    font-family: 'Montserrat', 'Poppins', sans-serif; /* Fuente bold para el título */
+    color: #8B4513; /* Color de acento para el título */
+    font-size: 2.8rem; /* Tamaño de fuente grande y visible */
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 3px; /* Espaciado entre letras para un look moderno */
+}
+
+/* Estilos para los párrafos */
+p {
+    margin-bottom: 1.2rem;
+    font-size: 1.1rem;
+    line-height: 1.8; /* Mayor espacio para la legibilidad */
+    text-align: left; /* Alinea el texto a la izquierda para mejor lectura */
+}
+
+/* Estilos para el párrafo con el propósito principal */
+.padre p:first-of-type {
+    font-weight: bold;
+    font-style: italic;
+    color: #8B4513;
+}
+
+/* Estilos para la imagen */
+img {
+    max-width: 100%;
+    height: auto;
+    margin-top: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease; /* Transición suave para el hover */
+}
+
+/* Efecto al pasar el mouse sobre la imagen */
+img:hover {
+    transform: translateY(-5px); /* Desplaza la imagen hacia arriba */
+}
